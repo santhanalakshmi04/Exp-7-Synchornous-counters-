@@ -1,10 +1,16 @@
 # Exp-6-Synchornous-counters - up counter and down counter 
-### AIM: To implement 4 bit up and down counters and validate  functionality.
+
+### AIM:
+ To implement 4 bit up and down counters and validate  functionality.
+
 ### HARDWARE REQUIRED:  – PC, Cyclone II , USB flasher
+
 ### SOFTWARE REQUIRED:   Quartus prime
+
 ### THEORY 
 
 ## UP COUNTER 
+
 The counter is a digital sequential circuit and here it is a 4 bit counter, which simply means it can count from 0 to 15 and vice versa based upon the direction of counting (up/down). 
 
 The counter (“count“) value will be evaluated at every positive (rising) edge of the clock (“clk“) cycle.
@@ -46,43 +52,77 @@ This type of counter is normally referred to as a Down Counter, (CTD). In a bina
 
 4-bit Count Down Counter
 ### Procedure
-/* write all the steps invloved */
 
-
+Step 1: Module Declaration. module is a keywords defined in Verilog . Step 2: Input-Output Delecaration. Clock and reset are the inputs. Step 3: Declare the always keyword.
+ Step 4: Use if loop for the functionality. 
+Step 5: Assign the counter_up & _down. 
+Step 6: End the module
 
 ### PROGRAM 
-/*
+
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+Developed by: M.Pavithra
+RegisterNumber:  22008686
+
+UP COUNTER
+```
+module uc(input CLK,input reset,output[0:3]counter);
+reg[0:3] counter_up;
+always@(posedge CLK or posedge reset)
+begin
+if(reset)
+counter_up<=4'd0;
+else
+counter_up<=counter_up+4'd1;
+end
+assign counter=counter_up;
+endmodule
 
 
+DOWN COUNTER
 
-
-
-
+module dc(input CLK,input reset,output[0:3]counter);
+reg[0:3] counter_down;
+always@(posedge CLK or posedge reset)
+begin
+if(reset)
+counter_down<=4'd0;
+else
+counter_down<=counter_down-4'd1;
+end
+assign counter=counter_down;
+endmodule
+```
 ### RTL LOGIC UP COUNTER AND DOWN COUNTER  
 
+UP COUNTER
 
+![](./upc.png)
 
+DOWN COUNTER
 
-
-
-
-
+![](./downc.png)
 
 ### TIMING DIGRAMS FOR COUNTER  
 
+UP COUNTER
 
+![](./UPT.png)
 
+DOWN COUNTER
 
+![](./DOWNT.png)
 
 ### TRUTH TABLE 
 
+UP COUNTER
 
+![](./UPTT.png)
 
+DOWN COUNTER
 
-
+![](./DOWNTT.png)
 
 ### RESULTS 
+
+4 bit up and down counters are implemented and its functionality is validated successfully.
