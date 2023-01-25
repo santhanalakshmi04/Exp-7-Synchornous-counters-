@@ -95,33 +95,17 @@ endmodule
 ```
 ### RTL LOGIC UP COUNTER AND DOWN COUNTER  
 
-UP COUNTER
-
-![](./upc.png)
-
 DOWN COUNTER
 
-![](./downc.png)
-
-### TIMING DIGRAMS FOR COUNTER  
+![d1](https://user-images.githubusercontent.com/119475762/214637047-f72fa9e3-bc9d-47a8-8e4b-9ebc7a9e1529.png)
 
 UP COUNTER
+![di1](https://user-images.githubusercontent.com/119475762/214637190-bf7c000a-4b9d-4089-a7e8-703058160966.png)
 
-![](./UPT.png)
+TIMING DIGRAMS FOR COUNTER
+DOWN COUNTER  UP COUNTER:
+![di22](https://user-images.githubusercontent.com/119475762/214637390-6c60de78-c91f-447b-80fb-7d020a08d2bb.png)
 
-DOWN COUNTER
-
-![](./DOWNT.png)
-
-### TRUTH TABLE 
-
-UP COUNTER
-
-![](./UPTT.png)
-
-DOWN COUNTER
-
-![](./DOWNTT.png)
 
 ### RESULTS 
 
